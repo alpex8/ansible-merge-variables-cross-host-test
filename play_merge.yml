@@ -1,0 +1,9 @@
+---
+- name: Demonstrate Merging Host Reference Variables
+  hosts: host1
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Merge Cross Group Variables 1
+      ansible.builtin.debug:
+        msg: "{{ merge1 }}"
